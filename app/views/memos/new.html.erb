@@ -1,0 +1,14 @@
+<div class="container">
+    <h3>create memo</h3>
+    <%= form_tag("/create") do %>
+        <div class="form-group">
+            <%= label_tag "form-title", "Title" %>
+            <%= text_field :memos, :title, id:"form-title" ,class:"form-control" , placeholder: "Title" %>
+        </div>
+        <div class="form-group">
+            <%= label_tag "form-content", "Content" %>
+            <%= text_field :memos, :body, id:"form-content" ,class:"form-control" , placeholder: "Content" %>
+        </div>
+        <%= submit_tag "Create" ,class:"btn btn-primary" %>
+    <% end %>
+</div>

@@ -1,0 +1,14 @@
+<div class="container">
+    <h3>Memo List</h3>
+
+    <a href="/new" class="btn btn-primary">新規メモ作成</a>
+
+    <% @memos.each do |memo| %>
+        <div class="panel panel-success">
+            <div class="panel-heading"><%= memo.title %> <a href="/memos/<%=memo.id%>" data-method="delete">削除</a> <a href="/memos/<%=memo.id%>/edit">編集</a></div>
+            <div class="panel-body">
+                <%= memo.body %>
+            </div>
+        </div>
+    <% end %>
+</div>
