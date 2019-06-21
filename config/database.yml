@@ -10,16 +10,8 @@ default: &default
   timeout: 5000
 
 development:
-   <<: *default
-  adapter: mysql2
-  encoding: utf8
-  reconnect: false
-  pool: 5
-  username: test
-  password: takafumi0225
-  socket: /tmp/mysql.sock
-  host: testdb.choeol6uwvzw.us-west-2.rds.amazonaws.com
-  database: test
+  <<: *default
+  database: db/development.sqlite3
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
